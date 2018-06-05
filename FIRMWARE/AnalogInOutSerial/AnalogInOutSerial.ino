@@ -28,7 +28,8 @@ int tempo = 0;
 String data = "null value";
 void setup() {
   // initialize serial communications at 2 Mbps:
-  Serial.begin(2000000);
+  //Serial.begin(2000000);
+  Serial.begin(115200);
 }
 
 void loop() {
