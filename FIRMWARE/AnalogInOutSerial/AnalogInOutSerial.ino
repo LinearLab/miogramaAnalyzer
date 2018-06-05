@@ -25,7 +25,7 @@ const int analogInPin = A0;  // Analog input pin that the potentiometer is attac
 
 int sensorValue = 0;        // value read from the pot
 int tempo = 0;
-
+String data = "null value";
 void setup() {
   // initialize serial communications at 2 Mbps:
   Serial.begin(2000000);
@@ -37,11 +37,13 @@ void loop() {
 
 
   // print the results to the Serial Monitor:
-  Serial.print("(");
-  Serial.print(++tempo);
-  Serial.print(",");
-  Serial.print(sensorValue);
-  Serial.println(")");
+  data = "(";
+  tempo++;
+  data += tempo;
+  data += ",";
+  data += sensorValue;
+  data += ")";
+  Serial.println(data);
 
   // wait 2 milliseconds before the next loop for the analog-to-digital
   // converter to settle after the last reading:
