@@ -7,7 +7,7 @@
 #include "qcustomplot.h"
 #include <QRandomGenerator>
 
-#define valorMAX 100
+#define valorMAX 4095
 
 using namespace std;
 namespace Ui {
@@ -44,11 +44,11 @@ private slots:
     void on_btnHw_clicked();
     void on_btnLEDOn_clicked();
     void on_btnLeituraAnalog_clicked();
-    void on_btnLEDOn_2_clicked();
+    //void on_btnLEDOn_2_clicked();
     void insertTempo(int value);
     void insertSensor(int value);
-    void on_btn_Teste_clicked();
-    void on_pushButton_clicked();
+    //void on_btn_Teste_clicked();
+    //void on_pushButton_clicked();
 };
 
 #endif // WIDGET_H

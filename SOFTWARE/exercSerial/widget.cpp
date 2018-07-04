@@ -108,8 +108,8 @@ void Widget::ReadData()
     cout << "Dado lido: " << data.toLatin1().toStdString() << endl;
     ui->txtLog->append(data);
     data=data.section('/',0,0);
-    tempo_ard=data.section(';',0,0).toInt();
-    sensor_ard=data.section(';',1,1).toInt();
+    tempo_ard=data.section(',',0,0).toInt();
+    sensor_ard=data.section(',',1,1).toInt();
     this->insertSensor(sensor_ard);
     this->insertTempo(tempo_ard);
     if(contador_EstouroTempo>=75)
@@ -169,7 +169,7 @@ void Widget::insertSensor(int value)
     this->sensory.pop_back();
     this->sensory.prepend(aux);
     for (int var = 0; var < 100; var++) {
-        cout << "sesnsory: " << sensory[var] << endl;
+        cout << "sensory: " << sensory[var] << endl;
     }
 }
 
