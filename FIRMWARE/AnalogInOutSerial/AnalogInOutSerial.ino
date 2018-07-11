@@ -38,13 +38,13 @@ void loop() {
 
 
   // print the results to the Serial Monitor:
-  data = "(";
+  data = "";
   tempo++;
   data += tempo;
   data += ",";
   data += sensorValue;
-  data += ")";
-  Serial.println(data);
+  data += "\n\r";
+  Serial.print(data);
 
   // wait 2 milliseconds before the next loop for the analog-to-digital
   // converter to settle after the last reading:

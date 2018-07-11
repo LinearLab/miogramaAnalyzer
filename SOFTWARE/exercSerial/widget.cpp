@@ -33,7 +33,7 @@ Widget::Widget(QWidget *parent) :
      * DevSerial with Read Data Serial
      * TextEdit "teLog" with getData() after send data WriteData() [Not apply here in version 5.X]
      */
-    connect(devserial, SIGNAL(readyRead()), this, SLOT(ReadData()));
+
     this->tempox.resize(100);
     this->sensory.resize(100);
     this->ui->grafico->addGraph();
@@ -47,7 +47,7 @@ Widget::Widget(QWidget *parent) :
     this->insertTempo(0);
     this->ui->grafico->graph(0)->setData(tempox,sensory);
     this->ui->grafico->replot();
-
+    connect(devserial, SIGNAL(readyRead()), this, SLOT(ReadData()));
 }
 
 Widget::~Widget()
@@ -103,11 +103,13 @@ void Widget::WriteData(const QByteArray data)
 void Widget::ReadData()
 {
     int sensor_ard, tempo_ard;
+
     QString data = procSerial->Read();
-    //qDebug() << "Input: " << data << endl;
-    cout << "Dado lido: " << data.toLatin1().toStdString() << endl;
+    // << "Input: " << data << endl;
+    //qDebug() << data;
+    //cout << "Dado lido: " << endl;
     ui->txtLog->append(data);
-    data=data.section('/',0,0);
+    //data=data.section('(',0,0);
     tempo_ard=data.section(',',0,0).toInt();
     sensor_ard=data.section(',',1,1).toInt();
     this->insertSensor(sensor_ard);
@@ -169,7 +171,7 @@ void Widget::insertSensor(int value)
     this->sensory.pop_back();
     this->sensory.prepend(aux);
     for (int var = 0; var < 100; var++) {
-        cout << "sensory: " << sensory[var] << endl;
+        //cout << "sensory: " << sensory[var] << endl;
     }
 }
 

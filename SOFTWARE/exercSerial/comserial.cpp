@@ -171,7 +171,7 @@ QString comserial::Read()
      QString bufRxSerial;
 
      /* Awaits read all the data before continuing */
-     while (devSerial->waitForReadyRead(200)) {
+     while (devSerial->waitForReadyRead(100)) {
          bufRxSerial += devSerial->readAll();
      }
      return bufRxSerial;
