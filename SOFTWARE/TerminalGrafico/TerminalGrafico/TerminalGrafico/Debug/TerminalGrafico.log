@@ -1,0 +1,9 @@
+﻿D:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(391,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (TerminalGaia.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  stdafx.cpp
+  AssemblyInfo.cpp
+  CppCLR_WinformsProjekt.cpp
+  Form1.cpp
+  Gerando Código...
+  .NETFramework,Version=v4.5.2.AssemblyAttributes.cpp
+  AssemblyInfo.obj : Módulo MSIL encontrado; vínculo incremental está desabilitado para MSIL; executando link completo
+  TerminalGrafico.vcxproj -> C:\Users\hkramm\Documents\TerminalGrafico\TerminalGrafico\Debug\TerminalGrafico.exe

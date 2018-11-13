@@ -1,0 +1,8 @@
+﻿  stdafx.cpp
+  AssemblyInfo.cpp
+  CppCLR_WinformsProjekt.cpp
+  Form1.cpp
+  Gerando Código...
+  .NETFramework,Version=v4.5.2.AssemblyAttributes.cpp
+  AssemblyInfo.obj : Módulo MSIL encontrado; vínculo incremental está desabilitado para MSIL; executando link completo
+  TerminalGrafico.vcxproj -> C:\Users\hkramm\Documents\TerminalGrafico\TerminalGrafico\x64\Debug\TerminalGrafico.exe
