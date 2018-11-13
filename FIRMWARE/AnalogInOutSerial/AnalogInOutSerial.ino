@@ -39,21 +39,22 @@ void loop() {
 
 
   // print the results to the Serial Monitor:
-  data = "";
+  data = "x";
 
-  while(count!=0)
+  //while(count!=0)
   {
-      count--;
+    //  count--;
       sensorValue = analogRead(analogInPin);
       tempo++;
       data += tempo;
-      data += ",";
+      data += "y";
       data += sensorValue;
-      data += "\n\r";
-      delay(3);
+      //data += "\n\r";
+      delay(40);
+      if(tempo == 100)tempo = 0;
       
   }
-  count = 1000;
+ // count = 1000;
   
   Serial.print(data);
 
